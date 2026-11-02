@@ -1,0 +1,1 @@
+run_id,started_utc,user,host,model,split,sites,n_files,n_detections,weights,weights_sha256,aivis_commit,aivis_dirty,out_dir,tag

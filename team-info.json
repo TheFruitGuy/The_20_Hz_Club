@@ -1,0 +1,33 @@
+{
+    "team_name": "The 20 Hz Club",
+    "students": [
+        {
+            "student_id": "k01126326",
+            "first_name": "Matthias",
+            "last_name": "Nagl",
+            "email": "matthias.nagl@jku.at",
+            "github_user": "TheFruitGuy"
+        },
+        {
+            "student_id": "k01027570",
+            "first_name": "Klaus",
+            "last_name": "Lex",
+            "email": "[email]",
+            "github_user": "[github user]"
+        },
+        {
+            "student_id": "[k-number]",
+            "first_name": "Abhirup",
+            "last_name": "Mitra",
+            "email": "[email]",
+            "github_user": "[github user]"
+        },
+        {
+            "student_id": "[k-number]",
+            "first_name": "Gaurav",
+            "last_name": "Parajuli",
+            "email": "[email]",
+            "github_user": "[github user]"
+        }
+    ]
+}

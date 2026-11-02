@@ -1,0 +1,22 @@
+# One environment for the YOLO baseline, Whale-VAD, NAVE and the analysis.
+# torch/torchaudio stay at 2.8: the YOLO baseline's preprocessing uses torchaudio calls that
+# later versions removed. ultralytics is pinned to the version the baseline was trained with.
+torch==2.8.0
+torchaudio==2.8.0
+torchvision==0.23.0
+ultralytics==8.3.91
+numpy
+pandas>=2.2,<3   # the baseline and the official scorer were written for pandas 2
+scipy
+soundfile
+pyarrow
+tqdm
+pyyaml
+matplotlib
+pillow
+scikit-learn
+jupyterlab
+ipywidgets
+anywidget
+ipykernel
+sebbs==1.0.2     # change-point sound event bounding boxes (aivis.phase1.decode)

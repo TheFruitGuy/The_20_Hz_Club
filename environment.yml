@@ -1,0 +1,12 @@
+# conda env create -f environment.yml
+# conda activate aivis
+# python scripts/aivis_setup.py all
+#
+# Only Python itself comes from conda. The packages are installed with pip by the setup script,
+# because the right PyTorch build (CUDA, CPU, MPS) depends on the machine.
+name: aivis
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
