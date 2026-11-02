@@ -17,18 +17,23 @@ Task 2 beyond one leaderboard score? Test ids (C1, F1, ...) refer to `logs/prere
 
 ## 2. Turning "behaviour" into views and probes (around 20 to 22.10.2026)
 
-- **Prompt (shortened):** Phase I asks how the model behaves, not how well it scores. What should we
-  look at for three detectors on long recordings?
-- **AI suggestion:** ten hypotheses (C1 to C10) with one view or probe each: an outcome per label and per
+- **Prompt (shortened):** Phase I is about behaviour, not scores. The three detectors read the audio in
+  different ways (YOLO: 30 s spectrogram images every 15 s; Whale-VAD: 30 s tiles; NAVE: 60 s tiles with
+  a PCEN channel), so each design should fail in its own places. Propose per-call views and controlled
+  probes that test where each one breaks, and keep every model on the same thresholds and matching.
+- **AI suggestion:** ten hypotheses (C1 to C10), one view or probe each: an outcome per label and per
   detection (hit, merged, wrong class, missed almost, duplicate, background), rankings under 18 scoring
   variants, agreement between models on the unlabelled eval sites, and synthetic probes (shift a call in
   frequency, change the level, add a distant transient, move a call to a tile edge, swap the background).
-- **Accepted:** the probe set and the outcome categories; they became `aivis/phase1/`.
-- **Changed:** the AI first wrote the results up as findings (`results/phase1/findings.md`). We
-  marked all of them exploratory and required a pre-registered follow-up before any of it goes into a
-  presentation. That rule shaped the rest of Phase I.
-- **Rejected:** estimating precision on the new sites from model agreement. It said 0.5 to 0.6 for BMABZ
-  on kerguelen2014 where the true value is 0.8 to 0.93, so it is only shown with that warning.
+- **Accepted:** the probe set and the outcome categories, implemented in `aivis/phase1/`. We added the
+  tile-edge and level probes as direct tests of the window designs above.
+- **Changed:** the first write-up (`results/phase1/findings.md`) read like conclusions. We treated all of
+  it as exploratory and required a pre-registered follow-up for anything that goes into a presentation.
+  That rule shaped the rest of Phase I.
+- **Rejected:** model agreement as a precision estimate on the new sites. Models that share training
+  data also share false alarms, so we tested the estimate in-sample on a dev site with labels first:
+  it gave 0.5 to 0.6 for BMABZ on kerguelen2014, the real precision is 0.8 to 0.93. We use it only as a
+  hint, marked as such; precision on unlabelled audio comes from the blind listening check (section 6).
 
 ## 3. Frequency drift: from a probe result to the main finding (22 to 23.10.2026)
 
@@ -82,12 +87,12 @@ Task 2 beyond one leaderboard score? Test ids (C1, F1, ...) refer to `logs/prere
 
 ## 7. Figures for the midpoint (29.10 to 02.11.2026)
 
-- **Prompt (verbatim):** "slide 3 is there a more coole experimental way to present the numbers? just
-  suggets me a few ideas … dont change the slide"
+- **Prompt (shortened):** for each key slide, give us several alternative ways to show the same numbers,
+  clean and fast to read, in the deck palette and from the real tables; do not change the slide yet.
 - **AI suggestion:** five to six options per figure (wall of calls, chance comparison, alluvial,
   spectrogram gallery, swarm; dumbbell and slope charts), rendered from the real tables.
-- **Accepted:** the chance comparison for shared misses, the dumbbell for drift, the slope chart for
-  loudness (`aivis/phase1/slidefigs.py`).
+- **Chosen by us:** the chance comparison for shared misses (it puts the baseline next to the result),
+  the dumbbell for drift (one before and after per model) and the slope chart for loudness (`aivis/phase1/slidefigs.py`).
 - **Corrected by us:** the AI used our internal "macro B" in place of the metric name F1, mixed points and
   percentage points, and cited the Deep Voice report informally.
 
