@@ -25,13 +25,12 @@ Task 2 beyond one leaderboard score? Test ids (C1, F1, ...) refer to `logs/prere
   detection (hit, merged, wrong class, missed almost, duplicate, background), rankings under 18 scoring
   variants, agreement between models on the unlabelled eval sites, and synthetic probes (shift a call in
   frequency, change the level, add a distant transient, move a call to a tile edge, swap the background).
-- **Accepted:** the probe set and the outcome categories, implemented in `aivis/phase1/`. We added the
-  tile-edge and level probes as direct tests of the window designs above.
+- **Accepted:** the probe set and the outcome categories, implemented in `aivis/phase1/`.
 - **Changed:** the first write-up (`results/phase1/findings.md`) read like conclusions. We treated all of
   it as exploratory and required a pre-registered follow-up for anything that goes into a presentation.
   That rule shaped the rest of Phase I.
 - **Rejected:** model agreement as a precision estimate on the new sites. Models that share training
-  data also share false alarms, so we tested the estimate in-sample on a dev site with labels first:
+  data also share false alarms, so the estimate needed a check on a dev site with labels, in-sample:
   it gave 0.5 to 0.6 for BMABZ on kerguelen2014, the real precision is 0.8 to 0.93. We use it only as a
   hint, marked as such; precision on unlabelled audio comes from the blind listening check (section 6).
 
