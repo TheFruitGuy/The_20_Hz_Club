@@ -8,9 +8,11 @@ interactions: [`ai-interactions/phase1.md`](ai-interactions/phase1.md).
 ## What we used it for
 
 We used Claude (Anthropic) as a chat partner and as a coding agent with access to our repo and the CP
-servers. It wrote most of the code (setup, prediction export, matching, probes, figures), proposed most
-of the hypotheses and tests, ran long jobs on the server and drafted the write-ups. We decided what to
-test, wrote every expectation into `logs/preregistration.md` before the run, and checked the results.
+servers. We set the questions, the tests and the rules of the analysis (same thresholds and matching for
+every model, pre-registration before every run); the AI wrote most of the code (setup, prediction
+export, matching, probes, figures), ran long jobs on the server, proposed candidate hypotheses and
+drafted write-ups. Every expectation went into `logs/preregistration.md` before the run, and we checked
+every result before using it.
 
 ## Breadth and depth
 
