@@ -1,0 +1,12 @@
+[project]
+name = "aivis"
+version = "0.1.0"
+description = "AI and Vis lab: the YOLO baseline, Whale-VAD and NAVE under one protocol"
+requires-python = ">=3.11"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["aivis", "aivis.models", "aivis.phase1"]

@@ -1,0 +1,25 @@
+{
+    "team_name": "The 20 Hz Club",
+    "students": [
+        {
+            "first_name": "Matthias",
+            "last_name": "Nagl",
+            "workload": 0.25
+        },
+        {
+            "first_name": "Klaus",
+            "last_name": "Lex",
+            "workload": 0.25
+        },
+        {
+            "first_name": "Abhirup",
+            "last_name": "Mitra",
+            "workload": 0.25
+        },
+        {
+            "first_name": "Gaurav",
+            "last_name": "Parajuli",
+            "workload": 0.25
+        }
+    ]
+}

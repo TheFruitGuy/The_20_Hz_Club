@@ -1,0 +1,83 @@
+# Everything the setup downloads, pinned. If you change a commit or a checksum, change it here
+# (and say why in logs/decisions.md), not in the scripts.
+
+[repos.task2]
+description = "YOLO baseline, official evaluation scripts and task README"
+url = "https://github.com/marinebioCASE/task2_2025_2026.git"
+commit = "580df291c88ed62f68a2203c11284c64813e81df"
+path = "external/task2_2025_2026"
+
+[repos.whalevad]
+description = "Whale-VAD (CNN + BiLSTM), installed as the whalevad package"
+url = "https://github.com/CMGeldenhuys/Whale-VAD.git"
+commit = "6aba272bea10d0700c65447977cff44b7433c4b0"
+path = "external/Whale-VAD"
+
+[repos.nave]
+description = "NAVE (CNN + Conformer), code and checkpoint"
+url = "https://github.com/TheFruitGuy/NAVE-SED.git"
+commit = "6fbe03682fcb3425ebe15790546bd7a9c90cf15b"
+path = "external/NAVE-SED"
+
+[repos.deepvoice]
+description = "DeepVoice YOLOv11m and ViT systems (code only, no weights)"
+url = "https://github.com/deep-voice/biodcase-2026.git"
+commit = "c03715e3aedf70042a570574e0a8b09612cec652"
+path = "external/biodcase-2026"
+optional = true
+
+[data.dev]
+description = "2026 BioDCASE Task 2 development set (train + validation, labelled), CC BY 4.0"
+zenodo_record = 18832958
+file = "2026_BioDCASE_development_set.zip"
+md5 = "1105fa1f707fe9f270ccc3ad05ddb7d0"
+approx_gb = 5.6
+target = "dev"                      # ends up as data/dev/{train,validation}/{audio,annotations}
+marker = ["train", "validation"]    # folder inside the zip that contains these is the dataset root
+
+[data.eval]
+description = "2026 BioDCASE Task 2 evaluation set (audio only, no labels), CC BY 4.0"
+zenodo_record = 20485251
+file = "2026_BioDCASE_evaluation_set.zip"
+md5 = "d294207a3fdd307bd42b3920f5cf0e20"
+approx_gb = 1.1
+target = "eval"                     # ends up as data/eval/audio/<site>
+marker = ["audio"]
+
+[weights.yolo_baseline]
+description = "YOLO11s baseline weights 2026 (3 joined classes)"
+zenodo_record = 20281116
+file = "task2_baseline_weights_2026.pt"
+md5 = "77338e98682b014decd7531dc70e5f3b"
+
+[weights.whalevad]
+description = "Whale-VAD release v0.1.0 (ATBFL, trained on the 3 joined classes, 7-unit head)"
+url = "https://github.com/CMGeldenhuys/Whale-VAD/releases/download/v0.1.0/WhaleVAD_ATBFL_3P-c6f6a07a.pt"
+file = "WhaleVAD_ATBFL_3P-c6f6a07a.pt"
+sha256_prefix = "c6f6a07a"
+
+[weights.nave]
+description = "NAVE checkpoint (k153) shipped in the NAVE-SED repo"
+from_repo = "nave"
+repo_path = "pretrained/nave.pt"
+file = "nave.pt"
+
+[sites]
+train = ["ballenyislands2015", "casey2014", "elephantisland2013", "elephantisland2014",
+         "greenwich2015", "kerguelen2005", "maudrise2014", "rosssea2014"]
+validation = ["casey2017", "kerguelen2014", "kerguelen2015"]
+evaluation = ["ddu2019", "ddu2021", "kerguelen2019", "kerguelen2020"]
+
+# Number of audio files per site from the task README, used only for a warning in the check.
+[expected_files]
+ballenyislands2015 = 205
+casey2014 = 194
+elephantisland2013 = 2247
+elephantisland2014 = 2592   # the task README says 2595, the 2026 zip has 2592
+greenwich2015 = 190
+kerguelen2005 = 200
+maudrise2014 = 200
+rosssea2014 = 176
+casey2017 = 187
+kerguelen2014 = 200
+kerguelen2015 = 200
