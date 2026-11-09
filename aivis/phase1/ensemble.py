@@ -1,4 +1,4 @@
-"""Pre-registered tests EN1 to EN4 (logs/preregistration.md, 25.10.2026): do the three models combine?
+"""Pre-registered tests EN1 to EN4 (ai-interactions/preregistration.md, 25.10.2026): do the three models combine?
 
     python -m aivis.phase1.ensemble route     # per-class best model (tables only, seconds)
     python -m aivis.phase1.ensemble vote      # events confirmed by other models (tables only, a minute)

@@ -1,5 +1,5 @@
 """Pre-registered tests L1 to L4 (NAVE ablation ladder) and A1 to A4 (frequency-shift augmentation),
-logs/preregistration.md, 23.10.2026.
+ai-interactions/preregistration.md, 23.10.2026.
 
     python -m aivis.phase1.ablate list                      # which checkpoints are there
     python -m aivis.phase1.ablate run [--only A B ...] [--seeds 0 1]

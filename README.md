@@ -29,7 +29,7 @@ The pairs switch in Phase II.
 
 Figures of the midpoint slides are in [`results/phase1/slides/`](results/phase1/slides/), made with
 `python -m aivis.phase1.slidefigs` from the Phase I tables. Every test, with
-what we expected before running it, is in [`logs/preregistration.md`](logs/preregistration.md).
+what we expected before running it, is in [`ai-interactions/preregistration.md`](ai-interactions/preregistration.md).
 
 Human-only pair:
 
@@ -54,9 +54,8 @@ AI-aided pair:
 ```
 aivis/              our code: running the models, scoring, the Phase I analyses (aivis/phase1/)
 notebooks/          01 first look at data and models, 02 Phase I tables, 03 listening check
-logs/               preregistration.md (tests, written before each run), decisions.md
 results/phase1/     slide figures (aivis/phase1/slidefigs.py)
-ai-interactions/    record of the AI-aided pair's GenAI use
+ai-interactions/    record of the AI-aided pair's GenAI use, preregistration.md (every test, written before the run)
 config/ scripts/    pinned versions and the setup script
 ```
 

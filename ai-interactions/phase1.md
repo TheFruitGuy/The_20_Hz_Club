@@ -1,7 +1,7 @@
 # Phase I: important AI interactions (AI-aided pair)
 
 Phase I question, agreed by all four of us: how do YOLO, Whale-VAD and NAVE behave on BioDCASE 2026
-Task 2 beyond one leaderboard score? Test ids (C1, F1, ...) refer to `logs/preregistration.md`.
+Task 2 beyond one leaderboard score? Test ids (C1, F1, ...) refer to [`preregistration.md`](preregistration.md).
 
 Each entry: what we asked for, what the AI produced, and what we decided.
 
@@ -14,7 +14,7 @@ Each entry: what we asked for, what the AI produced, and what we decided.
   for threshold sweeps.
 - **We decided:** the fast matcher is only used after it gives identical tp/fp/fn to
   `evaluation_submissions.py`; scoring uses the leaderboard script because `evaluation.py` drops the D
-  class (`logs/decisions.md`, 18.10).
+  class.
 - **Effect:** the human-only pair could start from the same outputs on a laptop.
 
 ## 2. Turning "behaviour" into views and probes (around 20 to 22.10.2026)
@@ -46,7 +46,7 @@ Each entry: what we asked for, what the AI produced, and what we decided.
 - **AI produced:** the measurement (27.3 Hz in 2005 to 25.3 Hz in 2020), the shifted-audio test (BMABZ
   recall down 16 to 36 points at -0.6 Hz), five NAVE seeds (S2, S3) and the ablation ladder (L1 to L4).
 - **We decided:** frequency-shift augmentation with a symmetric range of -1.5 to +1.5 Hz, so the model
-  is not told the direction of the drift (`logs/decisions.md`, 23.10).
+  is not told the direction of the drift.
 - **Kept as refuted:** L2 (the frequency-dynamic stem would make NAVE more shift-sensitive) and the "D and
   BP stay within 10 %" part of F2.
 

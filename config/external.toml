@@ -1,5 +1,5 @@
-# Everything the setup downloads, pinned. If you change a commit or a checksum, change it here
-# (and say why in logs/decisions.md), not in the scripts.
+# Everything the setup downloads, pinned. If you change a commit or a checksum, change it here,
+# not in the scripts.
 
 [repos.task2]
 description = "YOLO baseline, official evaluation scripts and task README"

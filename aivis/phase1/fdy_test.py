@@ -1,4 +1,4 @@
-"""Pre-registered test G1 to G3 (logs/preregistration.md, 23.10.2026): does NAVE's loss at high recording
+"""Pre-registered test G1 to G3 (ai-interactions/preregistration.md, 23.10.2026): does NAVE's loss at high recording
 levels come from the FDY kernel mixing?
 
     python -m aivis.phase1.fdy_test [--rungs A B C D] [--seeds 0 1 ...] [--device cuda]

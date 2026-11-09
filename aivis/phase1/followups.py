@@ -1,4 +1,4 @@
-"""Pre-registered follow-ups F1, F2 and E1 (logs/preregistration.md, 22.10.2026).
+"""Pre-registered follow-ups F1, F2 and E1 (ai-interactions/preregistration.md, 22.10.2026).
 
     python -m aivis.phase1.followups make      # frequency-shifted copies of four sites
     python -m aivis.phase1.followups run       # the three models on them, NAVE with 30 s overlap

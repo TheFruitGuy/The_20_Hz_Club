@@ -1,4 +1,4 @@
-"""Pre-registered seed tests S1 to S6 (logs/preregistration.md, 22.10.2026): all five NAVE checkpoints
+"""Pre-registered seed tests S1 to S6 (ai-interactions/preregistration.md, 22.10.2026): all five NAVE checkpoints
 through the same analyses. Seed 666 is the released checkpoint every earlier result used; seeds 0, 1, 42
 and 1337 were not looked at before the pre-registration.
 

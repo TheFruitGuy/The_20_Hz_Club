@@ -1,4 +1,4 @@
-"""Common output formats and the run record (logs/runs.csv, made on the first run)."""
+"""Common output formats and the run record (outputs/runs.csv, made on the first run)."""
 from __future__ import annotations
 
 import csv
@@ -106,7 +106,7 @@ def provenance() -> dict:
 
 
 class Run:
-    """One output folder per run, with run.json and a line in logs/runs.csv."""
+    """One output folder per run, with run.json and a line in outputs/runs.csv."""
 
     def __init__(self, out_dir: Path, model: str, split: str, args: dict, overwrite: bool = False):
         out_dir = Path(out_dir)
@@ -133,8 +133,8 @@ REGISTRY_COLUMNS = ["run_id", "started_utc", "user", "host", "model", "split", "
 def register(info: dict, out_dir: Path) -> None:
     if os.environ.get("AIVIS_NO_REGISTRY"):   # set by the smoke test
         return
-    reg = paths.LOGS / "runs.csv"
-    reg.parent.mkdir(exist_ok=True)
+    reg = paths.OUTPUTS / "runs.csv"
+    reg.parent.mkdir(parents=True, exist_ok=True)
     new = not reg.exists() or reg.stat().st_size == 0
     try:
         rel = str(Path(out_dir).resolve().relative_to(paths.ROOT))

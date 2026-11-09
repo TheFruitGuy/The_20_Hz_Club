@@ -3,7 +3,7 @@ config/local.toml
 external/
 data
 weights/
-# results stay local; commit only small summaries (results/) and logs/
+# results stay local; commit only small summaries (results/)
 outputs/
 runs/
 .cache/
@@ -18,6 +18,3 @@ __pycache__/
 # not in the public repo: private NAVE checkpoints and the listening-check audio pack
 checkpoints/
 results/phase1/listening/
-
-# made by every run
-logs/runs.csv

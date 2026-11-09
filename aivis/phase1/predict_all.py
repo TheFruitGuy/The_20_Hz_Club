@@ -8,7 +8,7 @@ Safe to stop and start again: a site counts as done once its run.json exists, an
 is redone. Output: outputs/phase1/<model>/<site>/ (detections.csv, frame_probs/ or boxes_raw.parquet,
 run.json). Progress goes to outputs/phase1/progress.log.
 
-Settings for the Phase I exports (see logs/decisions.md):
+Settings for the Phase I exports:
   YOLO      confidence 0.01 instead of 0.1, so thresholds can be swept afterwards; the baseline
             output is the subset with confidence >= 0.1
   Whale-VAD frame probabilities saved (all 7 outputs too), events at 0.5 (re-made at tuned thresholds later)

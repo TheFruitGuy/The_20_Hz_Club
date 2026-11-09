@@ -17,7 +17,6 @@ DEV = DATA / "dev"            # train/ and validation/, each with audio/<site>/*
 EVAL = DATA / "eval"          # audio/<site>/*.wav, no labels
 WEIGHTS = ROOT / "weights"
 OUTPUTS = Path(os.environ.get("AIVIS_OUTPUTS", ROOT / "outputs"))
-LOGS = ROOT / "logs"
 
 SITES: dict[str, list[str]] = CONFIG["sites"]
 SPLITS = ("train", "validation", "evaluation")

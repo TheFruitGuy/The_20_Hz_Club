@@ -1,4 +1,4 @@
-"""F2d (logs/preregistration.md, 06.11.2026): the 2019/20 eval audio shifted DOWN by 0.6 Hz, the control for F2.
+"""F2d (ai-interactions/preregistration.md, 06.11.2026): the 2019/20 eval audio shifted DOWN by 0.6 Hz, the control for F2.
 
     python -m aivis.phase1.f2_down --device cuda:0                 # Whale-VAD only
     python -m aivis.phase1.f2_down --device cuda:0 --models whalevad nave yolo

@@ -10,7 +10,7 @@ Writes outputs/<model>/<split>[_<tag>]/ with
     frame_probs/         Whale-VAD and NAVE: frame probabilities per recording (.npz)
     boxes_raw.parquet    YOLO: every box of every window before conversion
     run.json             settings, thresholds, weights hash, commits, package versions
-and adds a line to logs/runs.csv.
+and adds a line to outputs/runs.csv.
 """
 from __future__ import annotations
 

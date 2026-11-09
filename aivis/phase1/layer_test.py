@@ -1,4 +1,4 @@
-"""Pre-registered test H1 and H2 (logs/preregistration.md, 23.10.2026): where inside the full NAVE does the
+"""Pre-registered test H1 and H2 (ai-interactions/preregistration.md, 23.10.2026): where inside the full NAVE does the
 loss at +20 dB arise?
 
     python -m aivis.phase1.layer_test                 # all 5 NAVE seeds (rung D), about 10 min on a laptop CPU
