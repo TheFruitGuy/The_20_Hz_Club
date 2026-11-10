@@ -16,18 +16,18 @@
             "github_user": "KlausLex"
         },
         {
-            "student_id": "[k-number]",
+            "student_id": "k12137014",
             "first_name": "Abhirup",
             "last_name": "Mitra",
-            "email": "[email]",
-            "github_user": "[github user]"
+            "email": "abhirup.mitra@jku.at",
+            "github_user": "Abhi310502"
         },
         {
             "student_id": "K12455655",
             "first_name": "Gaurav",
             "last_name": "Parajuli",
-            "email": "[email]",
-            "github_user": "[github user]"
+            "email": "K12455655@students.jku.at",
+            "github_user": "gauravparajuli"
         }
     ]
 }
