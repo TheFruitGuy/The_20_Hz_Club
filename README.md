@@ -27,8 +27,9 @@ The pairs switch in Phase II.
 
 ## Phase I results
 
-Figures of the midpoint slides are in [`results/phase1/slides/`](results/phase1/slides/), made with
-`python -m aivis.phase1.slidefigs` from the Phase I tables. Every test, with
+The midpoint slides are in
+[`results/phase1/slides/midpoint_slides.pdf`](results/phase1/slides/midpoint_slides.pdf), their figures in the
+same folder, made with `python -m aivis.phase1.slidefigs` from the Phase I tables. Every test, with
 what we expected before running it, is in [`ai-interactions/preregistration.md`](ai-interactions/preregistration.md).
 
 Human-only pair:
