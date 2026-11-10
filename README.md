@@ -61,6 +61,7 @@ config/ scripts/    pinned versions and the setup script
 
 Midpoint files: [`ai_reflection_midpoint.md`](ai_reflection_midpoint.md),
 [`ai-interactions/`](ai-interactions/), [`team-info.json`](team-info.json), [`workload.json`](workload.json).
+Progress-update video: [Google Drive](https://drive.google.com/file/d/1PwkOyK-NHCzf-FPXbLSSO_JqnWnKydOG/view?usp=sharing).
 
 ## Setup
 
